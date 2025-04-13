@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Заработок онлайн</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f1f8e9, #e0f2f1);
+      text-align: center;
+      padding: 40px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2e7d32;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+    .button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      background-color: #43a047;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Умножь свой баланс легко</h1>
+    <p>Простая стратегия, которая работает именно в твоей стране. Никаких скачиваний — только телефон и пара минут времени.</p>
+    <a href="#" class="button" onclick="redirectByCountry()">Попробовать</a>
+  </div>
+
+  <script>
+    async function redirectByCountry() {
+      try {
+        const res = await fetch('https://ipapi.co/json/');
+        const data = await res.json();
+        const country = data.country;
+        let url = "https://1wdgx.com";  // default
+
+        if (country === "UA") {
+          url = "https://1wjaov.top/casino/list?open=register&p=oh9m";
+        } else if (country === "RU") {
+          url = "https://1wqjnb.com/casino/list?open=register&p=p7pl";
+        }
+
+        window.location.href = url;
+      } catch (err) {
+        window.location.href = "https://1wdgx.com";
+      }
+    }
+  </script>
+</body>
+</html>
